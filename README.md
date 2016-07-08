@@ -30,6 +30,7 @@ set :region, 'us-west-2'
 ```
 
 **Usage:**
+
 Tag your EC2 instances so you can target specific servers in your Capistrano configuration.
 
 Here is how to target all `production` `application-servers`:
