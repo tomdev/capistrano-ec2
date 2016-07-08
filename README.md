@@ -29,7 +29,7 @@ config/deploy.rb
 set :region, 'us-west-2'
 ```
 
-Since it's a bad practice to have your credentials in source code, you should load them from default fog configuration file: ~/.fog. This file could look like this:
+Since it's a bad practice to have your credentials in source code, you should load them from default fog configuration file: `~/.fog`. This file could look like this:
 
 ```
 default:
