@@ -29,6 +29,14 @@ config/deploy.rb
 set :region, 'us-west-2'
 ```
 
+Since it's a bad practice to have your credentials in source code, you should load them from default fog configuration file: ~/.fog. This file could look like this:
+
+```
+default:
+  aws_access_key_id:     <YOUR_ACCESS_KEY_ID>
+  aws_secret_access_key: <YOUR_SECRET_ACCESS_KEY>
+```
+
 **Usage:**
 
 Tag your EC2 instances so you can target specific servers in your Capistrano configuration.
