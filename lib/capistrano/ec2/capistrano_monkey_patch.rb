@@ -8,7 +8,11 @@ module Capistrano
         region: fetch(:region),
         use_iam_profile: fetch(:use_iam_profile, false)
 
-      filters = { "tag:ec2_env" => ec2_env, "tag:role" => ec2_role }
+      filters = { 
+        "tag:ec2_env" => ec2_env, 
+        "tag:role" => ec2_role, 
+        'instance-state-name': 'running' 
+      }
 
       ec2.servers.all(filters).map.with_index do |ec2_server, index|
         next unless ec2_server.ready?
