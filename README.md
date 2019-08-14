@@ -37,6 +37,9 @@ default:
   aws_secret_access_key: <YOUR_SECRET_ACCESS_KEY>
 ```
 
+As an alternative to directly using credentials, you can also use IAM instance profiles by
+setting `:use_iam_profile` to `true` in the deploy configuration.
+
 **Usage:**
 
 Tag your EC2 instances so you can target specific servers in your Capistrano configuration.
