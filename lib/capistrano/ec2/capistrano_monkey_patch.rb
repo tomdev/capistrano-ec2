@@ -1,4 +1,5 @@
 require 'fog/aws'
+require 'forwardable'
 
 module Capistrano
   class Configuration
@@ -58,6 +59,7 @@ module Capistrano
 
   module DSL
     module Env
+      extend Forwardable
       def_delegators :env, :for_each_ec2_server
     end
   end
